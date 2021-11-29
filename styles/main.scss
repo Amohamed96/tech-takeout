@@ -50,10 +50,10 @@ margin: 0px;
 }
 
 .infodiv, .fooddiv{
-  // height:auto;
+  height:auto;
   // box-sizing: content-box;
   flex-basis:100%;
-  // overflow-y: scroll;
+  overflow-y: scroll;
   min-height: none;
 
 }
