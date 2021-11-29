@@ -1,0 +1,45 @@
+// * {
+//   border: solid 2px red;
+// };
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  background: rgb(254, 254, 254);
+  border: solid 2px rgb(187, 187, 187);
+  border-radius: 10px;
+  padding: 2%;
+  width: 35%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.form-width {
+  width: 100%;
+}
+
+.divider {
+  width: 90%;
+  border-bottom: solid 1px grey;
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 1024px) {
+  #login-container {
+    width: 65%;
+  }
+}
+
+
+
+
