@@ -154,12 +154,20 @@ ul {
   list-style: none;
 }
 li {
-  width: 100px;
+  width: 150px;
 }
 .homeitem {
-  width: 50px;
+  width: 100px;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover {
+  color: aliceblue;
+}
 footer{
   display: flex;
   flex-direction: column;
