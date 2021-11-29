@@ -131,6 +131,35 @@ h3.paradesc {
   font-size: 2rem;
   font-weight: bolder;
 }
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(223, 226, 14, 0.822);
+  width: 100%;
+  margin: 0 auto;
+}
+.logo {
+  margin-left: 50px;
+  background-color: rgba(243, 8, 243, 0.822);
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 400px;
+  background-color: rgba(36, 250, 8, 0.822);
+  justify-content: space-between;
+  list-style: none;
+}
+li {
+  width: 100px;
+}
+.homeitem {
+  width: 50px;
+}
 
 footer{
   display: flex;
