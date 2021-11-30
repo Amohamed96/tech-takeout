@@ -8,12 +8,15 @@
 const express = require('express');
 const router  = express.Router();
 
-module.exports = (db) => {
+//GET /products/
+
+const productRouter = (db) => {
   router.get("/", (req, res) => {
-    db.query(`SELECT * FROM users;`)
+    db.query(`SELECT * FROM products;`)
       .then(data => {
-        const users = data.rows;
-        res.json({ users });
+        const menuItems = data.rows;
+        const templateVars = {menuItems};
+        res.render('index', templateVars)
       })
       .catch(err => {
         res
@@ -23,3 +26,6 @@ module.exports = (db) => {
   });
   return router;
 };
+
+
+module.exports = productRouter

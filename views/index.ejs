@@ -19,176 +19,42 @@
   <script type="text/javascript" src="/scripts/app.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
-  <nav>
-    <p></p>
-  </nav>
+  <%- include('partials/header') %>
 
   <main>
 
     <div class ="fooddiv">
       <h2 id="menuhead">Today's special</h2>
+
+      <% menuItems.forEach((item) => { %>
       <div class="menu-tiles">
         <div class="food-img-container">
           <img class="food-img"
-            src="https://media.istockphoto.com/photos/baked-tasty-margerita-pizza-near-oven-picture-id899907172?b=1&k=20&m=899907172&s=170667a&w=0&h=al2chmGmoGLVGTordDrQgK3F4DDHkph4lmcyT1loOjY="
-            alt="pizza">
+            src="<%= item.thumbnail_url %>">
         </div>
         <div class="desc-order-container">
-
-          <div class="title">Fresh Italian Rocca</div>
-          <div class="description">Cheese Mix, Rocca, Permesan Cheese, Tomato, Balsamic Vinegar</div>
-          <div class="food-type">Vegetarian</div>
-          <div class="price">50 C$</div>
+          <div class="title"><%= item.name %></div>
+          <div class="description"><%= item.description %></div>
+          <div class="food-type"><%= item.category %></div>
+          <div class="price"><%= item.price %>C$</div>
           <div class="add-to-basket"><a href="#">Add to basket</a></div>
-
         </div>
       </div>
-
-      <div class="menu-tiles">
-        <div class="food-img-container">
-          <img class="food-img"
-            src="https://media.istockphoto.com/photos/homemade-italian-bruschetta-on-rustic-wooden-table-picture-id1181611076?b=1&k=20&m=1181611076&s=170667a&w=0&h=_UR2cuy4gzTBZcPazSlacMVwjcV6_PCLHQMAPkHVOgc="
-            alt="pizza">
-        </div>
-        <div class="desc-order-container">
-
-          <div class="title">Fresh Italian Rocca</div>
-          <div class="description">Cheese Mix, Rocca, Permesan Cheese, Tomato, Balsamic Vinegar</div>
-          <div class="food-type">Vegetarian</div>
-          <div class="price">50 C$</div>
-          <div class="add-to-basket"><a href="#">Add to basket</a></div>
-
-        </div>
-      </div>
-
-
-      <div class="menu-tiles">
-        <div class="food-img-container">
-          <img class="food-img"
-            src="https://media.istockphoto.com/photos/homemade-italian-bruschetta-on-rustic-wooden-table-picture-id1181611076?b=1&k=20&m=1181611076&s=170667a&w=0&h=_UR2cuy4gzTBZcPazSlacMVwjcV6_PCLHQMAPkHVOgc="
-            alt="pizza">
-        </div>
-        <div class="desc-order-container">
-
-          <div class="title">Fresh Italian Rocca</div>
-          <div class="description">Cheese Mix, Rocca, Permesan Cheese, Tomato, Balsamic Vinegar</div>
-          <div class="food-type">Vegetarian</div>
-          <div class="price">50 C$</div>
-          <div class="add-to-basket"><a href="#">Add to basket</a></div>
-
-        </div>
-      </div>
-
-      <div class="menu-tiles">
-        <div class="food-img-container">
-          <img class="food-img"
-            src="https://media.istockphoto.com/photos/pasta-plate-picture-id637214478?b=1&k=20&m=637214478&s=170667a&w=0&h=6cKxdraXf5VErmb7nRw6vSrk_VehwCoTY2f4nNIhIpU="
-            alt="pizza">
-        </div>
-        <div class="desc-order-container">
-
-          <div class="title">Fresh Italian Rocca</div>
-          <div class="description">Cheese Mix, Rocca, Permesan Cheese, Tomato, Balsamic Vinegar</div>
-          <div class="food-type">Vegetarian</div>
-          <div class="price">50 C$</div>
-          <div class="add-to-basket"><a href="#">Add to basket</a></div>
-
-        </div>
-      </div>
-
-      <div class="menu-tiles">
-        <div class="food-img-container">
-          <img class="food-img"
-            src="https://media.istockphoto.com/photos/pasta-plate-picture-id637214478?b=1&k=20&m=637214478&s=170667a&w=0&h=6cKxdraXf5VErmb7nRw6vSrk_VehwCoTY2f4nNIhIpU="
-            alt="pizza">
-        </div>
-        <div class="desc-order-container">
-
-          <div class="title">Fresh Italian Rocca</div>
-          <div class="description">Cheese Mix, Rocca, Permesan Cheese, Tomato, Balsamic Vinegar</div>
-          <div class="food-type">Vegetarian</div>
-          <div class="price">50 C$</div>
-          <div class="add-to-basket"><a href="#">Add to basket</a></div>
-
-        </div>
-      </div>
-
-      <div class="menu-tiles">
-        <div class="food-img-container">
-          <img class="food-img"
-            src="https://media.istockphoto.com/photos/pasta-plate-picture-id637214478?b=1&k=20&m=637214478&s=170667a&w=0&h=6cKxdraXf5VErmb7nRw6vSrk_VehwCoTY2f4nNIhIpU="
-            alt="pizza">
-        </div>
-        <div class="desc-order-container">
-
-          <div class="title">Fresh Italian Rocca</div>
-          <div class="description">Cheese Mix, Rocca, Permesan Cheese, Tomato, Balsamic Vinegar</div>
-          <div class="food-type">Vegetarian</div>
-          <div class="price">50 C$</div>
-          <div class="add-to-basket"><a href="#">Add to basket</a></div>
-
-        </div>
-      </div>
-
+      <% }) %>
 
     </div>
 
     <div class ="infodiv">
       <h3 class="paradesc">Exquisite Italian Delights</h3>
       <div>
-        <p class="paradesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-
+        <p class="paradesc">Renowned Italian restaurant for excellence, has 35 locations worldwide.We feature Italian family recipes passed down from generations and adapted by master chef Alfredo Linguini and his team of gourmet chefs. The wonderful dishes include creative types of pasta, pizza, risotto, and many other delicious dishes. All are brought to life with locally- grown produce and fresh ingredients. The savory and delicious desserts demonstrate our passion for food. An extensive fruit drinks list will please the most discerning palate.</p>
       </div>
     </div>
 
   </main>
+  <%- include('partials/footer') %>
 
-  <footer>
- <div class="operationhrs">
-   <h3>Operation Hrs</h3>
-   <p>Monday to Friday</p>
-   <p>11am to 10pm</p>
-   <p>Weekends</p>
-   <p>11am to 5pm</p>
-
- </div>
-
- <div class="location">
-    <h3>Address</h3>
-    <p>712 Queen St W,</p>
-    <p>Toronto,</p>
-    <p>ON M6K 1Y9,</p>
-    <p>Canada</p>
-    <p>Phone: +1 416-516-616</p>
-    <p>www.techtakeout.com</p>
-</div>
-
-<div>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.090146165748!2d-79.41118508418101!3d43.64629277912153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34e3e4fc0da1%3A0xb4f196455a5780e3!2s716%20Queen%20St%20W%2C%20Toronto%2C%20ON%20M6J%201G1%2C%20Canada!5e0!3m2!1sen!2ssa!4v1638185479827!5m2!1sen!2ssa" width="300" height="275" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</div>
-
-<div>
-  <h3>Contact</h3>
-  <p>www.techtakeout.com</p>
-  <p>Phone: +1 416-516-616</p>
-  <p>Email: info@techtakeout.com</p>
-</div>
-
-
-
-
-  <!-- <div class="otherinfo">
-    <p>About</p>
-    <p>Support</p>
-    <p>Career</p>
-    <p>Terms</p>
-    <p>Privacy</p>
- </div> -->
-
-  </footer>
 </body>
 
 </html>
