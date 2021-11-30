@@ -2,6 +2,10 @@
 <html lang="en">
 
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Home Page</title>
 
 
@@ -9,13 +13,16 @@
     <link rel="stylesheet" href="/styles/checkout.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/login-register.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
+  </head>
   <body>
-    <main>
+    <div>
       <h1>Checkout</h1>
-      <section>
+    </div>
+    <main>
+      <section class="order-log">
         <div class="orders">
-
           <div class="order-item">
             <h3 class="order-number">1</h3>
             <p>Pizza with pepperoni and pineapple</p>
@@ -29,10 +36,12 @@
           </div>
           <div class="divider"></div>
 
+          <h4 class="order-total">Total: 70$</h4>
+
         </div>
       </section>
 
-      <section>
+      <section class="order-checkout">
 
           <form>
 

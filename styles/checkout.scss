@@ -8,7 +8,8 @@ h1 {
 
 body {
   display: flex;
-  justify-content: center !important;
+  flex-direction: column;
+  align-items: center !important;
   background-color: #FDFFE9 !important;
   text-align: center !important;
 }
@@ -68,4 +69,27 @@ section {
 #exampleInputPhone1 {
   width: 50%;
   margin-right: 2%;
+}
+
+.order-total {
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+  }
+
+  .order-log {
+    flex-grow: 1;
+  }
+
+  .order-checkout {
+    flex-grow: 1;
+  }
 }
