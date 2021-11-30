@@ -38,7 +38,7 @@
           <div class="description"><%= item.description %></div>
           <div class="food-type"><%= item.category %></div>
           <div class="price"><%= item.price %>C$</div>
-          <div class="add-to-basket"><a href="#">Add to basket</a></div>
+          <div class="add-to-basket"><a href="#" onclick="addToBasket('<%= item.id%>', '<%= item.name%>', '<%= item.price%>')">Add to basket</a></div>
         </div>
       </div>
       <% }) %>
