@@ -88,6 +88,10 @@ form {
   width: 100%;
 }
 
+.divider {
+  border-bottom:solid 1px rgb(187, 187, 187);
+}
+
 @media screen and (min-width: 1024px) {
   body {
     display: flex;
