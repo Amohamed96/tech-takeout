@@ -4,6 +4,7 @@ require("dotenv").config();
 // Twilio API
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
+const twilioNumber = process.env.TWILIO_NUMBER;
 const client = require('twilio')(accountSid, authToken);
 
 // requiring getCart function
@@ -68,12 +69,18 @@ app.get("/register", (req, res) => {
 });
 
 app.get("/checkout", (req, res) => {
-
   res.render("checkout");
 });
 
 app.post("/checkout", (req, res) => {
+  if (!req.body.cart) {
+    res.redirect("/checkout");
+  }
+
   const order = JSON.parse(req.body.cart);
+  const phoneNumber = req.body.phone.split(' ').join('').split('-').join('');
+  console.log(twilioNumber);
+
   const orderString = (order) => {
     let orderString = 'Customer Ordered:';
     for (let obj of order) {
@@ -81,10 +88,10 @@ app.post("/checkout", (req, res) => {
     }
     return orderString
   };
-  const phoneNumber = req.body.phone.split(' ').join('').split('-').join('');
+
   client.messages
   .create({
-    from: '+19152218907',
+    from: twilioNumber,
     to: phoneNumber,
     body: orderString(order),
   })
@@ -92,13 +99,13 @@ app.post("/checkout", (req, res) => {
   setTimeout(() => {
     client.messages
   .create({
-    from: '+19152218907',
+    from: twilioNumber,
     to: phoneNumber,
     body: 'Your order is ready part 2',
   })
   .then(message => console.log(message.sid));
   }, 4000);
-  res.redirect("/checkout");
+  res.redirect("/");
 });
 
 // delete for remove button

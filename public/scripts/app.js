@@ -50,17 +50,16 @@ const addToBasket = function (id, name, price) {
   orderTotalElement.innerHTML = `Total: $${totalPrice}.00`;
  }
 
-const appendStorageData = function(e){
+const appendStorageData = function(){
   const cartItems = localStorage.getItem('cart');
   const form = document.getElementById('phone-number-form');
   let input = document.createElement('input');
   input.value = cartItems;
   input.name = 'cart';
   input.type = 'hidden';
-  console.log(form);
   form.appendChild(input);
-  console.log(input);
-}
+  localStorage.clear();
+};
 
 
 
