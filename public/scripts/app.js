@@ -52,7 +52,8 @@ const addToBasket = function (id, name, price) {
  }
 
 const submitOrder = function(phone){
-  console.log(phone);
+  const phoneNumber = phone.split(' ').join('').split('-').join('');
+  console.log(phoneNumber);
   // localStorage.removeItem('cart')
 }
 
