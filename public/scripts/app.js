@@ -52,7 +52,7 @@ const addToBasket = function (id, name, price) {
  }
 
 const submitOrder = function(){
-  // TODO: call api to save data
+  console.log('working');
   localStorage.removeItem('cart')
 }
 
