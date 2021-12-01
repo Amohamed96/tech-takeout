@@ -31,8 +31,8 @@
 
           <form>
 
-              <input type="phone-number" class="form-phone" id="exampleInputPhone1" aria-describedby="emailHelp" placeholder="Enter phone-number">
-              <button type="button" class="btn-submit" onclick="submitOrder()">Submit</button>
+              <input type="text" name="phone" class="form-phone" id="exampleInputPhone1" placeholder="Enter phone-number">
+              <button type="button" class="btn-submit" onclick="submitOrder(document.getElementById('exampleInputPhone1').value)">Submit</button>
 
           </form>
 

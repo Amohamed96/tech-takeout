@@ -51,9 +51,9 @@ const addToBasket = function (id, name, price) {
   orderTotalElement.innerHTML = `Total: $${totalPrice}.00`;
  }
 
-const submitOrder = function(){
-  console.log('working');
-  localStorage.removeItem('cart')
+const submitOrder = function(phone){
+  console.log(phone);
+  // localStorage.removeItem('cart')
 }
 
 
