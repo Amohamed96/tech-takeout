@@ -6,6 +6,7 @@ h1 {
   font-size: 4rem;
 }
 
+
 body {
   display: flex;
   flex-direction: column;
@@ -31,13 +32,13 @@ section {
 .orders {
   display: flex;
   flex-direction: column;
+  align-self: flex-end;
   border: solid 2px rgb(187, 187, 187);
   width: 70%;
   text-align: left;
   padding: 2%;
   border-radius: 10px;
 }
-
 .order-item {
   display: flex;
   align-items: center;
@@ -48,7 +49,9 @@ section {
   text-align: center;
   margin: 2%;
 }
-
+.meal-price {
+  margin-left: 20px;
+}
 .food-img {
   max-width: 20%;
   border-radius: 25%;
@@ -60,6 +63,7 @@ section {
   border-bottom: solid 1px rgb(187, 187, 187);
   outline: none;
 }
+// remove-btn
 
 .btn-submit {
   background: #25B3FF;
@@ -81,7 +85,13 @@ section {
 }
 
 .order-total {
-  text-align: center;
+  display: flex;
+  align-self: flex-end;
+}
+.order-log {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 form {
@@ -104,6 +114,7 @@ form {
   }
 
   .order-log {
+    display: flex;
     flex-grow: 1;
   }
 

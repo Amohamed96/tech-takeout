@@ -33,6 +33,7 @@ const addToBasket = function (id, name, price) {
   const orderPanelElement = document.getElementById("orderPanel"); // Order box
   const orderTotalElement = document.getElementById("orderTotal"); // Total price element
 
+  // html that will be added when data is updated
   let html = '';
   cartProducts.forEach(product => {
     const currentPrice = product.quantity * product.price;
@@ -40,14 +41,14 @@ const addToBasket = function (id, name, price) {
     html += `
       <div class="order-item">
         <h3 class="order-number">${product.name}</h3>
-        <p class="order-description">${product.quantity}</p>
-        <p>-$${currentPrice}</p>
+        <p class="order-quantity">qty: ${product.quantity}</p>
+        <p class="meal-price"> $${currentPrice}</p>
       </div>
       <div class="divider"></div>
     `
   });
   orderPanelElement.innerHTML = html; // Replacing HTML with out new code
-  orderTotalElement.innerHTML = `$${totalPrice}`;
+  orderTotalElement.innerHTML = `Total: $${totalPrice}.00`;
  }
 
 const submitOrder = function(){
@@ -55,3 +56,5 @@ const submitOrder = function(){
   localStorage.removeItem('cart')
 }
 
+
+// TODO- Not important: <button type="button" class="btn btn-danger remove-button">Remove</button>

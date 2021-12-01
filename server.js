@@ -63,6 +63,8 @@ app.get("/checkout", (req, res) => {
 
   res.render("checkout");
 });
+// delete for remove button
+// call to database and reduce quantity
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
