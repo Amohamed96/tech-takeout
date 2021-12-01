@@ -23,7 +23,6 @@ const addToBasket = function (id, name, price) {
   if (cartItemsStorage) {
     cartItems = JSON.parse(cartItemsStorage);
   }
-  console.log(cartItems);
   return cartItems;
  }
 
@@ -51,9 +50,16 @@ const addToBasket = function (id, name, price) {
   orderTotalElement.innerHTML = `Total: $${totalPrice}.00`;
  }
 
-const submitOrder = function(){
-
-  localStorage.removeItem('cart')
+const appendStorageData = function(e){
+  const cartItems = localStorage.getItem('cart');
+  const form = document.getElementById('phone-number-form');
+  let input = document.createElement('input');
+  input.value = cartItems;
+  input.name = 'cart';
+  input.type = 'hidden';
+  console.log(form);
+  form.appendChild(input);
+  console.log(input);
 }
 
 

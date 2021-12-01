@@ -73,14 +73,20 @@ app.get("/checkout", (req, res) => {
 });
 
 app.post("/checkout", (req, res) => {
-  const cartItems = getCart();
-  console.log(cartItems);
+  const order = JSON.parse(req.body.cart);
+  const orderString = (order) => {
+    let orderString = 'Customer Ordered:';
+    for (let obj of order) {
+      orderString += `\n Order: ${obj.name} Qty:${obj.quantity}`;
+    }
+    return orderString
+  };
   const phoneNumber = req.body.phone.split(' ').join('').split('-').join('');
   client.messages
   .create({
     from: '+19152218907',
     to: phoneNumber,
-    body: 'Your order is ready',
+    body: orderString(order),
   })
   .then(message => console.log(message.sid));
   setTimeout(() => {
@@ -92,7 +98,7 @@ app.post("/checkout", (req, res) => {
   })
   .then(message => console.log(message.sid));
   }, 4000);
-  res.redirect("/");
+  res.redirect("/checkout");
 });
 
 // delete for remove button
