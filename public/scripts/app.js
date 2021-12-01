@@ -1,5 +1,4 @@
 // Client facing scripts here
-
 const addToBasket = function (id, name, price) {
     const cartItems = getCart();
 
@@ -24,6 +23,7 @@ const addToBasket = function (id, name, price) {
   if (cartItemsStorage) {
     cartItems = JSON.parse(cartItemsStorage);
   }
+  console.log(cartItems);
   return cartItems;
  }
 
@@ -51,11 +51,11 @@ const addToBasket = function (id, name, price) {
   orderTotalElement.innerHTML = `Total: $${totalPrice}.00`;
  }
 
-const submitOrder = function(phone){
-  const phoneNumber = phone.split(' ').join('').split('-').join('');
-  console.log(phoneNumber);
-  // localStorage.removeItem('cart')
+const submitOrder = function(){
+
+  localStorage.removeItem('cart')
 }
+
 
 
 // TODO- Not important: <button type="button" class="btn btn-danger remove-button">Remove</button>

@@ -29,15 +29,18 @@
 
       <section class="order-checkout">
 
-          <form>
+          <form method="POST" action="/checkout">
 
-              <input type="text" name="phone" class="form-phone" id="exampleInputPhone1" placeholder="Enter phone-number">
-              <button type="button" class="btn-submit" onclick="submitOrder(document.getElementById('exampleInputPhone1').value)">Submit</button>
+              <input type="text" class="form-phone" name="phone" id="exampleInputPhone1" placeholder="Enter phone-number">
+              <button type="submit" class="btn-submit">Submit</button>
 
           </form>
 
       </section>
     </main>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/tether.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script src="/scripts/app.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', printCart , false);

@@ -3,8 +3,9 @@ const router  = express.Router();
 
 //GET /products/
 
-const checkoutRouter = (db) => {
+const checkoutRouter = () => {
   router.post("/checkout", (req, res) => {
+    console.log("works")
     const phoneNumber = req.body.phone.split(' ').join('').split('-').join('');
     client.messages
     .create({
