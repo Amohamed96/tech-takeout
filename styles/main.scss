@@ -109,7 +109,10 @@ img.food-img {
  display: flex;
  justify-content: center;
  align-items:center;
- font-weight: bold;;
+ font-weight: bold;
+ background-color: rgba(128, 255, 0, 0.753);
+ border-bottom-right-radius: 1rem;
+
 }
 
 .add-to-basket a{
@@ -244,7 +247,7 @@ footer{
   justify-content: space-around;
   text-align: center;
   flex-basis: 100%;
-  background-color: rgba(96, 206, 240, 0.822);
+  background-color: rgba(226, 152, 14, 0.726);
   font-family: 'Laila', sans-serif;
   // align-self:center;'
   padding-left: 15px;
@@ -280,6 +283,7 @@ iframe{
 .nav-link-active:hover {
   background-color: rgba(226, 152, 14, 0.418);
 }
+
 @media only screen and (min-width: 768px){
 
     main {
@@ -397,6 +401,9 @@ img.food-img {
  justify-content: center;
  align-items:center;
  font-weight: bold;
+ background-color: rgba(128, 255, 0, 0.753);
+ border-bottom-right-radius: 10rem;
+
 }
 
 .title {
