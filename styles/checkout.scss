@@ -1,22 +1,21 @@
-// * {
-//   border: solid 2px red;
-// }
-
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 
 body {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  // flex-direction: column;
   align-items: center;
-  background-color: #FDFFE9;
-  text-align: center;
+  // background-color: #FDFFE9;
+  // text-align: center;
+  width: 100%;
+  font-family: 'Libre Baskerville', serif;
 }
 
 main {
-  width: 80%;
+  width: 100%;
 }
 
 section {
@@ -26,28 +25,51 @@ section {
 }
 
 .checkout-title {
-  margin-bottom: 5%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  flex-basis: 100%;
 }
 
 .orders {
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
+  // align-self: flex-end;
   border: solid 2px rgb(187, 187, 187);
-  width: 70%;
-  text-align: left;
+  width: 80%;
+  // text-align: left;
   padding: 2%;
   border-radius: 10px;
+
 }
+
+.order-total{
+  display: flex;
+  justify-content: flex-end;
+  // border: solid 2px rgb(187, 187, 187);
+  border-bottom: solid 4px rgb(187, 187, 187);
+  width: 80%;
+  // text-align: left;
+  padding: 2%;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: larger;
+  // background-color: rgb(187, 187, 187);
+}
+
+
+
 .order-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .order-number {
   padding: 5px;
   text-align: center;
   margin: 2%;
+  width:10rem;
 }
 .meal-price {
   margin-left: 20px;
@@ -70,54 +92,131 @@ section {
   padding: 1em;
   color: white;
   border: none;
-  border-radius: 10%;
+  border:2px solid rgb(187, 187, 187);
+  border-radius: 3rem;
 }
 
-.specific {
-  display: flex;
-  justify-content: center;
-  width: 80%;
-}
+
 #exampleInputPhone1 {
   width: 50%;
-  margin-right: 2%;
+  margin-right: 2px;
+  margin-bottom: 5px;
+  padding: 1em;
+  border-bottom:2px solid rgb(187, 187, 187);
+  border-radius: 3rem;
+
 }
 
-.order-total {
-  display: flex;
-  align-self: flex-end;
-}
 .order-log {
   display: flex;
   flex-direction: column;
+  flex-basis: 100%;
   flex-grow: 1;
+  align-items: center;
+  justify-content: center;
 }
 
-form {
-  width: 100%;
-}
+// form {
+//   width: 100%;
+// }
 
 .divider {
   border-bottom:solid 1px rgb(187, 187, 187);
 }
 
-@media screen and (min-width: 1024px) {
-  body {
-    display: flex;
-    flex-direction: column;
+.checkout-left-img{
+  max-width:100%;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+align-self: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.phonenumberlabel{
+margin: 10px;
+  align-self: center;
+  font-weight: bold;
+}
+
+.phoneenterspace{
+  flex-basis: 100%;
+  margin: 10px;
+    align-self: center;
   }
+
+
+
+@media screen and (min-width: 768px) {
+  // body {
+  //   // display: flex;
+  //   // flex-direction: column;
+  //   width: 100%;
+  // }
 
   main {
-    display: flex;
-    align-items: center;
+    display: inline-flex;
+    width: 100%;
+    // align-items: center;
   }
 
+  .checkout-right, .checkout-left {
+    width: 45%;
+    flex-grow:1;
+    height: 100vh;
+    justify-content: center;
+    // border: 5px solid red;
+  }
+
+  .checkout-left-img{
+    max-width:100%;
+    height: 100%;
+  align-self: center;
+  }
   .order-log {
     display: flex;
+    flex-direction:column;
     flex-grow: 1;
+    align-items: center;
+    justify-content: center;
   }
 
   .order-checkout {
-    flex-grow: 1;
+    display: inline-flex;
+    width: 100%;
+
   }
+
+  .phonenumberlabel {
+    align-self:center;
+  }
+
+
+  #orderTotal {
+    display: flex;
+    width: 80%;
+    justify-content: flex-end;
+    font-weight: bold;
+  }
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
+
+.phonenumberlabel, .phoneenterspace{
+margin: 10px;
+  align-self: center;
+}
+}
+
+
+
+
