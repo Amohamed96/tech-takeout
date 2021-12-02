@@ -1,14 +1,13 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-    // font-family: 'Libre Baskerville', serif;
-    font-family: 'Josefin Sans', sans-serif;
+body{
+  display: flex;
+}
+main.thankyoubody {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
-div{
-  flex-basis: 100%;
-  text-align: center;
+.thankyoudiv {
+width: 100%;
 }
