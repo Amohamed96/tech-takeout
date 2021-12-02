@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
 
+  <script src="https://kit.fontawesome.com/feda09e3b4.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
   <script type="text/javascript" src="/scripts/app.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,26 +23,85 @@
 
   <main>
 
-    <div class ="fooddiv">
-      <!-- <h2 id="menuhead">Today's special</h2> -->
+    <section class="index-image">
+      <h1> Ordering made easy </h1>
+    </section>
 
-      <% menuItems.forEach((item) => { %>
-      <div class="menu-tiles">
-        <div class="food-img-container">
-          <img class="food-img"
-            src="<%= item.thumbnail_url %>">
+    <section class="index-order-section">
+
+      <aside class="sidebar">
+
+        <div class="reviews-title">
+          <h2>Reviews</h2>
         </div>
-        <div class="desc-order-container">
-          <div class="title"><%= item.name %></div>
-          <div class="description"><%= item.description %></div>
-          <div class="food-type"><%= item.category %></div>
-          <div class="price"><%= item.price %>C$</div>
-          <div class="add-to-basket"><a href="#" onclick="addToBasket('<%= item.id%>', '<%= item.name%>', '<%= item.price%>')">Add to basket</a></div>
+
+        <container class="reviews">
+          <div>
+            <div class="reviews-text">
+              <p>"The Italian Riccots was splendous" -Jeffrey Bezos</p>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div>
+            <div class="reviews-text">
+              <p>"Great vegetarian choices would come back here again" -Vincent</p>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+          <div>
+            <div class="reviews-text">
+              <p>"The tomato creme Rigatoni was to die for, truly splendid" -Gordon ramsey</p>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <div>
+            <div class="reviews-text">
+              <p>"Green salad was okay..." -Snob</p>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+        </container>
+
+
+      </aside>
+
+      <div class ="fooddiv">
+        <h2 id="menuhead">Today's special</h2>
+
+        <% menuItems.forEach((item) => { %>
+        <div class="menu-tiles">
+          <div class="food-img-container">
+            <img class="food-img"
+              src="<%= item.thumbnail_url %>">
+          </div>
+          <div class="desc-order-container">
+            <div class="title"><%= item.name %></div>
+            <div class="description"><%= item.description %></div>
+            <div class="food-type"><%= item.category %></div>
+            <div class="price"><%= item.price %>C$</div>
+            <div class="add-to-basket"><a href="#" onclick="addToBasket('<%= item.id%>', '<%= item.name%>', '<%= item.price%>')">Add to basket</a></div>
+          </div>
         </div>
+        <% }) %>
+
       </div>
-      <% }) %>
-
-    </div>
+    </section>
 <!--
     <div class ="infodiv">
       <h3 class="paradesc">Exquisite Italian Delights</h3>
