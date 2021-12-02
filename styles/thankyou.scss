@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    // font-family: 'Libre Baskerville', serif;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+div{
+  flex-basis: 100%;
+  text-align: center;
+}

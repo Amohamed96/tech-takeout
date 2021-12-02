@@ -68,6 +68,10 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
+app.get("/thankyou", (req, res) => {
+  res.render("thankyou");
+});
+
 app.get("/checkout", (req, res) => {
   res.render("checkout");
 });
@@ -101,11 +105,11 @@ app.post("/checkout", (req, res) => {
   .create({
     from: twilioNumber,
     to: phoneNumber,
-    body: 'Your order is ready part 2',
+    body: 'Your order is ready for pickup',
   })
   .then(message => console.log(message.sid));
   }, 4000);
-  res.redirect("/");
+  res.redirect("thankyou");
 });
 
 // delete for remove button
