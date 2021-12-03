@@ -58,9 +58,10 @@ const appendStorageData = function(){
   input.name = 'cart';
   input.type = 'hidden';
   form.appendChild(input);
-  localStorage.clear();
 };
 
-
+const clearCart = function () {
+  localStorage.clear();
+}
 
 // TODO- Not important: <button type="button" class="btn btn-danger remove-button">Remove</button>
