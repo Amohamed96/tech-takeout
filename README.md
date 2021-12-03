@@ -11,11 +11,14 @@ Abdirahman Mohamed
 
 ## Final Product
 
-!["Home page"](https://github.com/Amohamed96/tinyapp/blob/master/docs/Screen%20Shot%202021-11-14%20at%201.52.28%20PM.png?raw=true)
+!["Mobile view"](https://github.com/Amohamed96/tech-takeout/blob/master/public/images/Screen%20Shot%202021-12-02%20at%209.53.53%20PM.png?raw=true)
 
-!["Checkout page"](https://github.com/Amohamed96/tinyapp/blob/master/docs/Screen%20Shot%202021-11-14%20at%201.53.05%20PM.png?raw=true)
 
-!["Mobile view"](https://github.com/Amohamed96/tinyapp/blob/master/docs/Screen%20Shot%202021-11-14%20at%201.53.38%20PM.png?raw=true)
+!["Home page"](https://github.com/Amohamed96/tech-takeout/blob/master/public/images/Screen%20Shot%202021-12-02%20at%209.50.13%20PM.png?raw=true)
+
+!["Checkout page"](https://github.com/Amohamed96/tech-takeout/blob/master/public/images/Screen%20Shot%202021-12-02%20at%209.51.37%20PM.png?raw=true)
+
+!["Thank you page"](https://github.com/Amohamed96/tech-takeout/blob/master/public/images/Screen%20Shot%202021-12-02%20at%209.51.59%20PM.png?raw=true)
 
 ## Set up Phone Number and Twilio
 
