@@ -1,24 +1,32 @@
 LHL Node Skeleton
 =========
 
-## Project Setup
+## Developers
 
-The following steps are only for _one_ of the group members to perform.
+Sean Hughes 
+Mohamed Shahul Hameed
+Abdirahman Mohamed
 
-1. Create your own copy of this repo using the `Use This Template` button, ideally using the name of your project. The repo should be marked Public
-2. Verify that the skeleton code now shows up in your repo on GitHub, you should be automatically redirected
-3. Clone your copy of the repo to your dev machine
-4. Add your team members as collaborators to the project so that they can push to this repo
-5. Let your team members know the repo URL so that they use the same repo (they should _not_ create a copy/fork of this repo since that will add additional workflow complexity to the project)
+# Final Product 
 
+## Final Product
 
-## Getting Started
+!["Home page"](https://github.com/Amohamed96/tinyapp/blob/master/docs/Screen%20Shot%202021-11-14%20at%201.52.28%20PM.png?raw=true)
+
+!["Checkout page"](https://github.com/Amohamed96/tinyapp/blob/master/docs/Screen%20Shot%202021-11-14%20at%201.53.05%20PM.png?raw=true)
+
+!["Mobile view"](https://github.com/Amohamed96/tinyapp/blob/master/docs/Screen%20Shot%202021-11-14%20at%201.53.38%20PM.png?raw=true)
+
+## Set up Phone Number and Twilio
 
 1. Create the `.env` by using `.env.example` as a reference: `cp .env.example .env`
 2. Update the .env file with your correct local information 
-  - username: `labber` 
-  - password: `labber` 
-  - database: `midterm`
+  - username: `your username` 
+  - password: `your password` 
+  - database: `database name`
+  - TWILIO_ACCOUNT_SID = 'Get from Twilio'
+  - TWILIO_AUTH_TOKEN = 'Get from Twilio'
+  - TWILIO_NUMBER = 'Get from Twilio'
 3. Install dependencies: `npm i`
 4. Fix to binaries for sass: `npm rebuild node-sass`
 5. Reset database: `npm run db:reset`
@@ -26,6 +34,30 @@ The following steps are only for _one_ of the group members to perform.
 7. Run the server: `npm run local`
   - Note: nodemon is used, so you should not have to restart your server
 8. Visit `http://localhost:8080/`
+
+
+## Dependencies
+
+- Node 10.x or above
+- NPM 5.x or above
+- PG 6.x or above
+- Bootstrap 3.4.1 or above
+- chalk 2.4.2 or above
+- dotenv 2.0.0 or above
+- ejs 2.6.2 or above
+- express 4.17.1 or above
+- morgan 1.9.1 or above
+- pg 8.5.0 or above
+- pg-native 3.0.0 or above
+- sass  1.35.1 or above
+- twilio  3.71.2 or above
+
+## Dev-dependencies
+
+- nodemon 2.0.10 or above
+
+
+
 
 ## Warnings & Tips
 
@@ -35,9 +67,3 @@ The following steps are only for _one_ of the group members to perform.
 - Use the `npm run db:reset` command each time there is a change to the database schema or seeds. 
   - It runs through each of the files, in order, and executes them against the database. 
   - Note: you will lose all newly created (test) data each time this is run, since the schema files will tend to `DROP` the tables and recreate them.
-
-## Dependencies
-
-- Node 10.x or above
-- NPM 5.x or above
-- PG 6.x
