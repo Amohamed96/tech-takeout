@@ -29,7 +29,8 @@ main {
   font-size: 0.8rem;
   font-family: 'Laila', sans-serif;
   color: rgb(66, 62, 62);
-  border-bottom: 7px solid black;
+  border-bottom: 7px solid grey;
+  background-color: rgb(248, 248, 248);
   // overflow: hidden;
 
 }
@@ -45,24 +46,18 @@ margin-bottom: 5%;
 
 .menu-tiles {
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
-  align-items:space-between;
   width: 80%;
   border-radius: 2rem;
-  flex-grow:1;
   margin:1rem;
   height: 35%;
-
 }
 
 .infodiv, .fooddiv{
-  height:auto;
-  // box-sizing: content-box;
-  flex-basis:100%;
-  overflow-y: scroll;
-  min-height: none;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 div.food-img-container {
@@ -76,14 +71,13 @@ div.food-img-container {
 div.desc-order-container {
   display:flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: space-evenly;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   text-align: center;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
-  background-color: blanchedalmond;
-
+  background-color: white;
 }
 
 img.food-img {
@@ -104,19 +98,13 @@ img.food-img {
 }
 
 .add-to-basket {
-  width: 100%;
- display: flex;
- justify-content: center;
- align-items:center;
- font-weight: bold;
- background-color: rgba(128, 255, 0, 0.753);
- border-bottom-right-radius: 1rem;
-
-}
-
-.add-to-basket a{
-  color:rgb(112, 94, 94);
-  text-decoration: none;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 0.2em;
 }
 
 .title {
@@ -346,6 +334,11 @@ iframe{
     width: 20%;
     flex-grow: 1;
   }
+
+  .add-to-basket {
+    width: 75%;
+  }
+
 }
 @media only screen and (min-width: 768px){
   .reviews-text {
@@ -446,8 +439,8 @@ iframe{
     text-align: center;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    background-color: blanchedalmond;
-
+    background-color: white;
+    border: solid 1px grey;
   }
 
   img.food-img {
@@ -465,18 +458,6 @@ iframe{
   display: flex;
   justify-content: center;
   align-items:center;
-  }
-
-  .add-to-basket {
-    width: 100%;
-  //  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  font-weight: bold;
-  background-color: rgba(128, 255, 0, 0.753);
-  border-bottom-right-radius: 10rem;
-
   }
 
   .title {
