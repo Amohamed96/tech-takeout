@@ -1,5 +1,5 @@
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 
@@ -11,7 +11,7 @@ body {
   background-color: #FDFFE9;
   // text-align: center;
   width: 100%;
-  font-family: 'Libre Baskerville', serif;
+  // font-family: 'Libre Baskerville', serif;
 }
 
 main {
@@ -25,6 +25,7 @@ section {
 }
 
 .checkout-title {
+  margin-top: 5px;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
@@ -55,6 +56,7 @@ section {
   font-weight: bold;
   font-size: larger;
   // background-color: rgb(187, 187, 187);
+  font-size: 1.15rem;
 }
 
 
@@ -63,6 +65,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .order-number {
@@ -70,6 +73,7 @@ section {
   text-align: center;
   margin: 2%;
   width:10rem;
+  font-size: 1.4rem;
 }
 .meal-price {
   margin-left: 20px;
@@ -79,12 +83,10 @@ section {
   border-radius: 25%;
 }
 
-#exampleInputPhone1 {
-  background-color: transparent;
-  border: none;
-  border-bottom: solid 1px rgb(187, 187, 187);
-  outline: none;
+.order-quantity, .meal-price{
+  font-size: 1.1rem;
 }
+
 // remove-btn
 
 .btn-submit {
@@ -94,6 +96,7 @@ section {
   border: none;
   border:2px solid rgb(187, 187, 187);
   border-radius: 3rem;
+  font-size: 0.8rem;
 }
 
 
@@ -104,6 +107,11 @@ section {
   padding: 1em;
   border-bottom:2px solid rgb(187, 187, 187);
   border-radius: 3rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px rgb(187, 187, 187);
+  outline: none;
+  font-size: 0.8rem;
 
 }
 
@@ -143,6 +151,7 @@ form {
 margin: 10px;
   align-self: center;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .phoneenterspace{
@@ -165,7 +174,7 @@ margin: 10px;
 }
 
 .checkout-right {
-  margin-top: 5%;
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 768px) {

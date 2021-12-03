@@ -5,12 +5,28 @@ body{
 }
 
 main.thankyoubody {
+
   width: 100%;
   display: flex;
   justify-content: center;
   text-align: center;
+  padding: 1rem;
 }
 
 .thankyoudiv {
 width: 100%;
+margin-top: 1rem;
+}
+
+h2.thankyoudiv{
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 768px) {
+  main.thankyoubody {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 }

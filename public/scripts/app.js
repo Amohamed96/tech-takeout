@@ -40,7 +40,7 @@ const addToBasket = function (id, name, price) {
     html += `
       <div class="order-item">
         <h3 class="order-number">${product.name}</h3>
-        <p class="order-quantity">qty: ${product.quantity}</p>
+        <p class="order-quantity">Qty: ${product.quantity}</p>
         <p class="meal-price"> $${currentPrice}</p>
       </div>
       <div class="divider"></div>
