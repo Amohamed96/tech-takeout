@@ -3,9 +3,9 @@ TECH-TAKEOUT
 
 ## Developers
 
-Sean Hughes 
-Mohamed Shahul Hameed
-Abdirahman Mohamed
+- Sean Hughes 
+- Mohamed Shahul Hameed
+- Abdirahman Mohamed
 
 
 ## Final Product
